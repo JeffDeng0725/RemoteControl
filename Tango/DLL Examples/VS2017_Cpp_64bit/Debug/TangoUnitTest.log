@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  GenericTests.cpp
+  SelfCheck.cpp
+  TangoUnitTest.cpp
+  Util.cpp
+  Code wird generiert...
+  TangoUnitTest.vcxproj -> C:\Users\markus.lehr\Desktop\VS2017_Cpp_64bit\Debug\TangoDLLtest.exe
+  Copying DLLs
+  Distrib\32\Tango_DLL.dll
+  1 Datei(en) kopiert

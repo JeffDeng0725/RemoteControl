@@ -1,0 +1,8 @@
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\VB_Tango_Project1.vbproj.GenerateResource.Cache
+.\bin\VB_Tango.exe
+.\bin\VB_Tango.xml
+obj\Release\VB_Tango_Project1.VB_Tango_Form1.resources
+obj\Release\VB_Tango.exe
+obj\Release\VB_Tango.xml
+obj\Release\VB_Tango_Project1.Resources.resources

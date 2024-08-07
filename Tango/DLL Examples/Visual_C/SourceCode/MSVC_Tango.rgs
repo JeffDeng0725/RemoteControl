@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{89FB984B-0F7A-4B3E-A8D4-E06B9472645B} = s 'MSVC_LStep4X'
+		'MSVC_LStep4X.EXE'
+		{
+			val AppID = s {89FB984B-0F7A-4B3E-A8D4-E06B9472645B}
+		}
+	}
+}

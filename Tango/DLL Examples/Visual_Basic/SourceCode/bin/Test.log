@@ -1,0 +1,21 @@
+[14:21:44.625]DllMain
+[14:21:44.625]Process attach
+[14:21:44.625]LS_ConnectSimple 1 COM1 9600 1
+[14:21:44.625]Opened connection COM1, handle is 348
+[14:21:44.656]Wrote string ?ver to handle 348
+[14:21:44.656]Vers:LS31.00.038 read from 348
+[14:21:45.156]LS_Disconnect
+[14:21:45.171]Closed connection handle 348
+[14:21:45.734]LS_ConnectSimple 1 COM1 9600 1
+[14:21:45.734]Opened connection COM1, handle is 348
+[14:21:45.765]Wrote string ?ver to handle 348
+[14:21:45.765]Vers:LS31.00.038 read from 348
+[14:21:49.062]LS_MoveRel 0 0 1 0 1
+[14:21:49.093]Wrote string !mor 0 0 1 0 to handle 348
+[14:21:49.281]@@@-. read from 348
+[14:21:51.234]DllMain
+[14:21:51.234]Thread attach
+[14:21:51.250]DllMain
+[14:21:51.250]Thread attach
+[14:21:51.250]DllMain
+[14:21:51.250]Process detach

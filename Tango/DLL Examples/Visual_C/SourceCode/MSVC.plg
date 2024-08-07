@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>Erstellungsprotokoll</h1>
+<h3>
+--------------------Konfiguration: MSVC_Tango - Win32 Debug--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Creating command line "rc.exe /l 0x407 /fo"Debug/MSVC_Tango.res" /d "_DEBUG" /d "_AFXDLL" "C:\Tango_API_Examples\VisualC\SourceCode\MSVC_Tango.rc"" 
+Erstellen der temporären Datei  "C:\DOKUME~1\falkd\LOKALE~1\Temp\RSPD4.tmp" mit Inhalten
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MSVC.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Tango_API_Examples\VisualC\SourceCode\Tango.cpp"
+"C:\Tango_API_Examples\VisualC\SourceCode\MSVC_Tango.cpp"
+"C:\Tango_API_Examples\VisualC\SourceCode\MSVC_TangoDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOKUME~1\falkd\LOKALE~1\Temp\RSPD4.tmp" 
+Erstellen der temporären Datei  "C:\DOKUME~1\falkd\LOKALE~1\Temp\RSPD5.tmp" mit Inhalten
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MSVC.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Tango_API_Examples\VisualC\SourceCode\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOKUME~1\falkd\LOKALE~1\Temp\RSPD5.tmp" 
+Erstellen der temporären Datei  "C:\DOKUME~1\falkd\LOKALE~1\Temp\RSPD6.tmp" mit Inhalten
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MSVC_Tango.pdb" /debug /machine:I386 /out:"MSVC_Tango.exe" /pdbtype:sept 
+.\Debug\Tango.obj
+.\Debug\MSVC_Tango.obj
+.\Debug\MSVC_TangoDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\MSVC_Tango.res
+]
+Erstellen der Befehlzeile "link.exe @C:\DOKUME~1\falkd\LOKALE~1\Temp\RSPD6.tmp"
+<h3>Ausgabefenster</h3>
+Ressourcen werden kompiliert...
+Kompilierung läuft...
+StdAfx.cpp
+Kompilierung läuft...
+Tango.cpp
+MSVC_Tango.cpp
+MSVC_TangoDlg.cpp
+Generieren von Code...
+Linker-Vorgang läuft...
+
+
+
+<h3>Ergebnisse</h3>
+MSVC_Tango.exe - 0 Fehler, 0 Warnung(en)
+</pre>
+</body>
+</html>

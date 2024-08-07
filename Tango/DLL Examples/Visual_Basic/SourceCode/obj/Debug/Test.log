@@ -1,0 +1,18 @@
+[14:22:10.093]DllMain
+[14:22:10.093]Process attach
+[14:22:10.093]LS_ConnectSimple 1 COM1 9600 1
+[14:22:10.093]Opened connection COM1, handle is 360
+[14:22:10.125]Wrote string ?ver to handle 360
+[14:22:10.125]Vers:LS31.00.038 read from 360
+[14:22:10.671]LS_Disconnect
+[14:22:10.687]Closed connection handle 360
+[14:22:11.093]LS_ConnectSimple 1 COM1 9600 1
+[14:22:11.093]Opened connection COM1, handle is 360
+[14:22:11.140]Wrote string ?ver to handle 360
+[14:22:11.140]Vers:LS31.00.038 read from 360
+[14:22:12.031]DllMain
+[14:22:12.031]Thread attach
+[14:22:12.046]DllMain
+[14:22:12.046]Thread attach
+[14:22:12.046]DllMain
+[14:22:12.046]Process detach

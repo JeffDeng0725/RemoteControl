@@ -1,0 +1,36 @@
+[14:22:16.734]DllMain
+[14:22:16.734]Process attach
+[14:22:16.750]LSX_ConnectSimple 1 1 COM1 9600 1
+[14:22:16.750]Opened connection COM1, handle is 376
+[14:22:16.781]Wrote string ?ver to handle 376
+[14:22:16.781]Vers:LS31.00.038 read from 376
+[14:22:17.390]LS_Disconnect
+[14:22:17.406]Closed connection handle 376
+[14:22:17.906]LSX_ConnectSimple 1 1 COM1 9600 1
+[14:22:17.906]Opened connection COM1, handle is 376
+[14:22:17.937]Wrote string ?ver to handle 376
+[14:22:17.937]Vers:LS31.00.038 read from 376
+[14:22:20.593]LS_MoveRel 0 0 1 0 1
+[14:22:20.625]Wrote string !mor 0 0 1 0 to handle 376
+[14:22:20.812]@@@-. read from 376
+[14:22:21.718]LS_MoveRel 0 0 1 0 1
+[14:22:21.750]Wrote string !mor 0 0 1 0 to handle 376
+[14:22:21.937]@@@-. read from 376
+[14:22:32.843]LS_MoveRel 0 0 1 0 1
+[14:22:32.890]Wrote string !mor 0 0 1 0 to handle 376
+[14:22:33.078]@@@-. read from 376
+[14:22:33.312]LS_MoveRel 0 0 1 0 1
+[14:22:33.343]Wrote string !mor 0 0 1 0 to handle 376
+[14:22:33.531]@@@-. read from 376
+[14:22:34.000]LS_MoveRel 0 0 1 0 1
+[14:22:34.031]Wrote string !mor 0 0 1 0 to handle 376
+[14:22:34.218]@@@-. read from 376
+[14:22:34.671]LS_MoveAbs 0 0 1 0 1
+[14:22:34.703]Wrote string !moa 0 0 1 0 to handle 376
+[14:22:45.000]@@@-. read from 376
+[14:22:47.500]DllMain
+[14:22:47.500]Thread attach
+[14:22:47.515]DllMain
+[14:22:47.515]Thread attach
+[14:22:47.515]DllMain
+[14:22:47.515]Process detach

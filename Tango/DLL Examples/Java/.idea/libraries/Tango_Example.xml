@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Tango_Example">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Tango_Example.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

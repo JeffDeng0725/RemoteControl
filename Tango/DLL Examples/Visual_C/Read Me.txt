@@ -1,0 +1,29 @@
+
+In order to add Tango DLL functionality to your Visual C++ project, you have to follow this steps:
+--------------------------------------------------------------------------------------------------
+
+
+1) Copy "Tango.cpp", "Tango.h" and "Tango.dll" into your project's folder
+
+
+2) In your "[projectname]Dlg.h", please insert: 
+   
+   a) #include "Tango.h"
+   
+   b) under "public:" or "protected:" CTango *pTango
+
+
+3) In your "[projectname]Dlg.cpp" under "OnInitDialog()", please insert: 
+   
+   pTango = new CTango();
+
+
+4) When closing your dialog, please don't forget to do some clean up in "OnClose()":
+
+   pTango->Disconnect();
+   delete pTango;
+
+
+5) Now you're ready to use the DLL, simply call any DLL function like 
+   
+  pTango->ConnectSimple(1,"COM1",57600,false);

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010.10.25 12:16:15.298.dproj,C:\Delphi_LStep4X\LStep4X_Demo.dproj=C:\Delphi_LStep4X\Tango_Demo.dproj</Transaction>
+    <Transaction>2010.10.25 12:16:34.344.dproj,C:\Delphi_LStep4X\Tango_Demo.dproj=C:\Delphi_LStep4X\Tango_Delphi7_Demo.dproj</Transaction>
+    <Transaction>2010.10.25 12:16:58.781.pas,C:\Delphi_LStep4X\LStep4X.pas=C:\Delphi_LStep4X\Tango_Delphi7.pas</Transaction>
+    <Transaction>2010.10.25 12:17:44.967.pas,C:\Delphi_LStep4X\LStep4X_Demo_main.pas=C:\Delphi_LStep4X\Tango_Delphi7_Demo_main.pas</Transaction>
+    <Transaction>2010.10.25 12:17:44.967.dfm,C:\Delphi_LStep4X\LStep4X_Demo_main.dfm=C:\Delphi_LStep4X\Tango_Delphi7_Demo_main.dfm</Transaction>
+    <Transaction>2010.10.25 12:49:30.010.pas,C:\Tango_Delphi7_Example\Tango_Delphi7.pas=C:\Tango_Delphi7_Example\Tango_DLL.pas</Transaction>
+  </Transactions>
+</BorlandProject>

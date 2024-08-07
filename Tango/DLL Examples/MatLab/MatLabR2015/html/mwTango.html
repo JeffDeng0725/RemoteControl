@@ -1,0 +1,620 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>mwTango</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-05-20"><meta name="DC.source" content="mwTango.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="comment">% loadlibrary('Tango DLL\Tango_DLL.dll','Tango DLL\Tango_DLL.h');</span>
+
+<span class="keyword">function</span> varargout = mwTango(varargin)
+    <span class="comment">% MWTANGO MATLAB code for mwTango.fig</span>
+    <span class="comment">%      MWTANGO, by itself, creates a new MWTANGO or raises the existing</span>
+    <span class="comment">%      singleton*.</span>
+    <span class="comment">%</span>
+    <span class="comment">%      H = MWTANGO returns the handle to a new MWTANGO or the handle to</span>
+    <span class="comment">%      the existing singleton*.</span>
+    <span class="comment">%</span>
+    <span class="comment">%      MWTANGO('CALLBACK',hObject,eventData,handles,...) calls the local</span>
+    <span class="comment">%      function named CALLBACK in MWTANGO.M with the given input arguments.</span>
+    <span class="comment">%</span>
+    <span class="comment">%      MWTANGO('Property','Value',...) creates a new MWTANGO or raises the</span>
+    <span class="comment">%      existing singleton*.  Starting from the left, property value pairs are</span>
+    <span class="comment">%      applied to the GUI before mwTango_OpeningFcn gets called.  An</span>
+    <span class="comment">%      unrecognized property name or invalid value makes property application</span>
+    <span class="comment">%      stop.  All inputs are passed to mwTango_OpeningFcn via varargin.</span>
+    <span class="comment">%</span>
+    <span class="comment">%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one</span>
+    <span class="comment">%      instance to run (singleton)".</span>
+    <span class="comment">%</span>
+    <span class="comment">% See also: GUIDE, GUIDATA, GUIHANDLES</span>
+
+    <span class="comment">% Edit the above text to modify the response to help mwTango</span>
+
+    <span class="comment">% Last Modified by GUIDE v2.5 13-May-2015 09:37:59</span>
+
+    <span class="comment">% Begin initialization code - DO NOT EDIT</span>
+    gui_Singleton = 1;
+    gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <span class="keyword">...</span>
+                       <span class="string">'gui_Singleton'</span>,  gui_Singleton, <span class="keyword">...</span>
+                       <span class="string">'gui_OpeningFcn'</span>, @mwTango_OpeningFcn, <span class="keyword">...</span>
+                       <span class="string">'gui_OutputFcn'</span>,  @mwTango_OutputFcn, <span class="keyword">...</span>
+                       <span class="string">'gui_LayoutFcn'</span>,  [] , <span class="keyword">...</span>
+                       <span class="string">'gui_Callback'</span>,   []);
+    <span class="keyword">if</span> nargin &amp;&amp; ischar(varargin{1})
+        gui_State.gui_Callback = str2func(varargin{1});
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> nargout
+        [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+    <span class="keyword">else</span>
+        gui_mainfcn(gui_State, varargin{:});
+    <span class="keyword">end</span>
+    <span class="comment">% End initialization code - DO NOT EDIT</span>
+
+<span class="keyword">end</span>
+
+<span class="comment">% --- Executes just before mwTango is made visible.</span>
+<span class="keyword">function</span> mwTango_OpeningFcn(hObject, eventdata, handles, varargin)
+    <span class="comment">% This function has no output args, see OutputFcn.</span>
+    <span class="comment">% hObject    handle to figure</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+    <span class="comment">% varargin   command line arguments to mwTango (see VARARGIN)</span>
+
+    <span class="comment">% Choose default command line output for mwTango</span>
+    handles.output = hObject;
+
+    <span class="comment">% set up the C pointer to the id for the Tango</span>
+    handles.idPtr = libpointer(<span class="string">'int32Ptr'</span>,1);
+    calllib(<span class="string">'Tango_DLL'</span>,<span class="string">'LSX_CreateLSID'</span>,handles.idPtr);
+
+    <span class="comment">% connect to the Tango</span>
+    calllib(<span class="string">'Tango_DLL'</span>,<span class="string">'LSX_ConnectSimple'</span>,handles.idPtr.Value,1,<span class="string">'COM3'</span>,57600,1);
+
+    <span class="comment">% clear the current position</span>
+    calllib(<span class="string">'Tango_DLL'</span>,<span class="string">'LSX_ClearPos'</span>,handles.idPtr.Value,7);
+
+    <span class="comment">% create the pointers for the positions</span>
+    handles.xPosPtr = libpointer(<span class="string">'doublePtr'</span>,0);
+    handles.yPosPtr = libpointer(<span class="string">'doublePtr'</span>,0);
+    handles.zPosPtr = libpointer(<span class="string">'doublePtr'</span>,0);
+    handles.aPosPtr = libpointer(<span class="string">'doublePtr'</span>,0);
+
+    updatePosition(handles);
+
+    <span class="comment">% Update handles structure</span>
+    guidata(hObject, handles);
+
+    <span class="comment">% UIWAIT makes mwTango wait for user response (see UIRESUME)</span>
+    <span class="comment">% uiwait(handles.figure1);</span>
+
+<span class="keyword">end</span>
+
+<span class="comment">% --- Executes when user attempts to close figure1.</span>
+<span class="keyword">function</span> figure1_CloseRequestFcn(hObject, eventdata, handles)
+    <span class="comment">% hObject    handle to figure1 (see GCBO)</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+    <span class="comment">% Hint: delete(hObject) closes the figure</span>
+    <span class="comment">% if the ActiveX control exists, close it out</span>
+
+    disp(<span class="string">'closing out'</span>);
+
+    <span class="comment">% disconnect from the Tango</span>
+    calllib(<span class="string">'Tango_DLL'</span>,<span class="string">'LSX_Disconnect'</span>,handles.idPtr.Value);
+    calllib(<span class="string">'Tango_DLL'</span>,<span class="string">'LSX_FreeLSID'</span>,handles.idPtr.Value);
+
+    get(handles.idPtr)
+
+    delete(hObject);
+
+<span class="keyword">end</span>
+
+<span class="comment">% --- Outputs from this function are returned to the command line.</span>
+<span class="keyword">function</span> varargout = mwTango_OutputFcn(hObject, eventdata, handles)
+    <span class="comment">% varargout  cell array for returning output args (see VARARGOUT);</span>
+    <span class="comment">% hObject    handle to figure</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+    <span class="comment">% Get default command line output from handles structure</span>
+    varargout{1} = handles.output;
+
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> edit_xPos_Callback(hObject, eventdata, handles)
+    <span class="comment">% hObject    handle to edit_xPos (see GCBO)</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+    <span class="comment">% Hints: get(hObject,'String') returns contents of edit_xPos as text</span>
+    <span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_xPos as a double</span>
+
+    handles = setPosition(handles);
+    updatePosition(handles);
+
+<span class="keyword">end</span>
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_xPos_CreateFcn(hObject, eventdata, handles)
+    <span class="comment">% hObject    handle to edit_xPos (see GCBO)</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+    <span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+    <span class="comment">%       See ISPC and COMPUTER.</span>
+    <span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+        set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> edit_yPos_Callback(hObject, eventdata, handles)
+    <span class="comment">% hObject    handle to edit_yPos (see GCBO)</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+    <span class="comment">% Hints: get(hObject,'String') returns contents of edit_yPos as text</span>
+    <span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_yPos as a double</span>
+
+    handles = setPosition(handles);
+    updatePosition(handles);
+
+<span class="keyword">end</span>
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_yPos_CreateFcn(hObject, eventdata, handles)
+    <span class="comment">% hObject    handle to edit_yPos (see GCBO)</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+    <span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+    <span class="comment">%       See ISPC and COMPUTER.</span>
+    <span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+        set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> edit_zPos_Callback(hObject, eventdata, handles)
+    <span class="comment">% hObject    handle to edit_zPos (see GCBO)</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+    <span class="comment">% Hints: get(hObject,'String') returns contents of edit_zPos as text</span>
+    <span class="comment">%        str2double(get(hObject,'String')) returns contents of edit_zPos as a double</span>
+
+    handles = setPosition(handles);
+    updatePosition(handles);
+
+<span class="keyword">end</span>
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> edit_zPos_CreateFcn(hObject, eventdata, handles)
+    <span class="comment">% hObject    handle to edit_zPos (see GCBO)</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+    <span class="comment">% Hint: edit controls usually have a white background on Windows.</span>
+    <span class="comment">%       See ISPC and COMPUTER.</span>
+    <span class="keyword">if</span> ispc &amp;&amp; isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+        set(hObject,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>);
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> handles = updatePosition(handles)
+
+    calllib(<span class="string">'Tango_DLL'</span>,<span class="string">'LSX_GetPos'</span>,handles.idPtr.Value,handles.xPosPtr,<span class="keyword">...</span>
+        handles.yPosPtr,handles.zPosPtr,handles.aPosPtr);
+
+    <span class="comment">%handles.xPosPtr.Value</span>
+
+    <span class="comment">% display the relative positions</span>
+    set(handles.edit_xPos,<span class="string">'String'</span>,num2str(handles.xPosPtr.Value));
+    set(handles.edit_yPos,<span class="string">'String'</span>,num2str(handles.yPosPtr.Value));
+    set(handles.edit_zPos,<span class="string">'String'</span>,num2str(handles.zPosPtr.Value));
+
+<span class="keyword">end</span>
+
+<span class="comment">% set the relative origin equal to the current position</span>
+<span class="keyword">function</span> handles = setZeroPosition(handles,axisStr)
+
+    <span class="comment">% clear the current position</span>
+    calllib(<span class="string">'Tango_DLL'</span>,<span class="string">'LSX_ClearPos'</span>,handles.idPtr.Value,7);
+
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> handles = setPosition(handles)
+
+    <span class="comment">% set the absolute position</span>
+    xPos = str2double(get(handles.edit_xPos,<span class="string">'String'</span>));
+    yPos = str2double(get(handles.edit_yPos,<span class="string">'String'</span>));
+    zPos = str2double(get(handles.edit_zPos,<span class="string">'String'</span>));
+
+    calllib(<span class="string">'Tango_DLL'</span>,<span class="string">'LSX_MoveAbs'</span>,handles.idPtr.Value,xPos,yPos,zPos,0,1);
+
+    pause(0.5);
+
+<span class="keyword">end</span>
+
+<span class="comment">% --- Executes on button press in pushbutton_xZero.</span>
+<span class="keyword">function</span> pushbutton_xZero_Callback(hObject, eventdata, handles)
+    <span class="comment">% hObject    handle to pushbutton_xZero (see GCBO)</span>
+    <span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+    <span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+    handles = setZeroPosition(handles,<span class="string">'x'</span>);
+    updatePosition(handles);
+
+    guidata(hObject, handles);
+
+<span class="keyword">end</span>
+
+<span class="comment">% --- Executes on button press in checkbox_liveUpdate.</span>
+<span class="keyword">function</span> checkbox_liveUpdate_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to checkbox_liveUpdate (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of checkbox_liveUpdate</span>
+
+    <span class="keyword">if</span> get(hObject,<span class="string">'Value'</span>) == 1
+        <span class="comment">% continuously update the checkbox is deactivated</span>
+        <span class="keyword">while</span> get(handles.checkbox_liveUpdate,<span class="string">'Value'</span>) == 1
+
+            updatePosition(handles);
+            pause(0.5);
+
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput error">Error using calllib
+Library was not found
+
+Error in mwTango&gt;mwTango_OpeningFcn (line 63)
+    calllib('Tango_DLL','LSX_CreateLSID',handles.idPtr);
+
+Error in gui_mainfcn (line 220)
+    feval(gui_State.gui_OpeningFcn, gui_hFigure, [], guidata(gui_hFigure), varargin{:});
+
+Error in mwTango (line 44)
+        gui_mainfcn(gui_State, varargin{:});
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+% loadlibrary('Tango DLL\Tango_DLL.dll','Tango DLL\Tango_DLL.h');
+
+function varargout = mwTango(varargin)
+    % MWTANGO MATLAB code for mwTango.fig
+    %      MWTANGO, by itself, creates a new MWTANGO or raises the existing
+    %      singleton*.
+    %
+    %      H = MWTANGO returns the handle to a new MWTANGO or the handle to
+    %      the existing singleton*.
+    %
+    %      MWTANGO('CALLBACK',hObject,eventData,handles,...) calls the local
+    %      function named CALLBACK in MWTANGO.M with the given input arguments.
+    %
+    %      MWTANGO('Property','Value',...) creates a new MWTANGO or raises the
+    %      existing singleton*.  Starting from the left, property value pairs are
+    %      applied to the GUI before mwTango_OpeningFcn gets called.  An
+    %      unrecognized property name or invalid value makes property application
+    %      stop.  All inputs are passed to mwTango_OpeningFcn via varargin.
+    %
+    %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+    %      instance to run (singleton)".
+    %
+    % See also: GUIDE, GUIDATA, GUIHANDLES
+
+    % Edit the above text to modify the response to help mwTango
+
+    % Last Modified by GUIDE v2.5 13-May-2015 09:37:59
+
+    % Begin initialization code - DO NOT EDIT
+    gui_Singleton = 1;
+    gui_State = struct('gui_Name',       mfilename, ...
+                       'gui_Singleton',  gui_Singleton, ...
+                       'gui_OpeningFcn', @mwTango_OpeningFcn, ...
+                       'gui_OutputFcn',  @mwTango_OutputFcn, ...
+                       'gui_LayoutFcn',  [] , ...
+                       'gui_Callback',   []);
+    if nargin && ischar(varargin{1})
+        gui_State.gui_Callback = str2func(varargin{1});
+    end
+
+    if nargout
+        [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+    else
+        gui_mainfcn(gui_State, varargin{:});
+    end
+    % End initialization code - DO NOT EDIT
+
+end
+
+% REPLACE_WITH_DASH_DASH- Executes just before mwTango is made visible.
+function mwTango_OpeningFcn(hObject, eventdata, handles, varargin)
+    % This function has no output args, see OutputFcn.
+    % hObject    handle to figure
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    structure with handles and user data (see GUIDATA)
+    % varargin   command line arguments to mwTango (see VARARGIN)
+
+    % Choose default command line output for mwTango
+    handles.output = hObject;
+
+    % set up the C pointer to the id for the Tango
+    handles.idPtr = libpointer('int32Ptr',1);
+    calllib('Tango_DLL','LSX_CreateLSID',handles.idPtr);
+    
+    % connect to the Tango
+    calllib('Tango_DLL','LSX_ConnectSimple',handles.idPtr.Value,1,'COM3',57600,1);
+    
+    % clear the current position
+    calllib('Tango_DLL','LSX_ClearPos',handles.idPtr.Value,7);
+    
+    % create the pointers for the positions
+    handles.xPosPtr = libpointer('doublePtr',0);
+    handles.yPosPtr = libpointer('doublePtr',0);
+    handles.zPosPtr = libpointer('doublePtr',0);
+    handles.aPosPtr = libpointer('doublePtr',0);
+    
+    updatePosition(handles);
+    
+    % Update handles structure
+    guidata(hObject, handles);
+
+    % UIWAIT makes mwTango wait for user response (see UIRESUME)
+    % uiwait(handles.figure1);
+
+end
+
+% REPLACE_WITH_DASH_DASH- Executes when user attempts to close figure1.
+function figure1_CloseRequestFcn(hObject, eventdata, handles)
+    % hObject    handle to figure1 (see GCBO)
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    structure with handles and user data (see GUIDATA)
+
+    % Hint: delete(hObject) closes the figure
+    % if the ActiveX control exists, close it out
+    
+    disp('closing out');
+    
+    % disconnect from the Tango
+    calllib('Tango_DLL','LSX_Disconnect',handles.idPtr.Value);
+    calllib('Tango_DLL','LSX_FreeLSID',handles.idPtr.Value);
+    
+    get(handles.idPtr)
+    
+    delete(hObject);
+
+end
+
+% REPLACE_WITH_DASH_DASH- Outputs from this function are returned to the command line.
+function varargout = mwTango_OutputFcn(hObject, eventdata, handles) 
+    % varargout  cell array for returning output args (see VARARGOUT);
+    % hObject    handle to figure
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    structure with handles and user data (see GUIDATA)
+
+    % Get default command line output from handles structure
+    varargout{1} = handles.output;
+
+end
+
+
+function edit_xPos_Callback(hObject, eventdata, handles)
+    % hObject    handle to edit_xPos (see GCBO)
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    structure with handles and user data (see GUIDATA)
+
+    % Hints: get(hObject,'String') returns contents of edit_xPos as text
+    %        str2double(get(hObject,'String')) returns contents of edit_xPos as a double
+
+    handles = setPosition(handles);
+    updatePosition(handles);
+    
+end
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_xPos_CreateFcn(hObject, eventdata, handles)
+    % hObject    handle to edit_xPos (see GCBO)
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    empty - handles not created until after all CreateFcns called
+
+    % Hint: edit controls usually have a white background on Windows.
+    %       See ISPC and COMPUTER.
+    if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+        set(hObject,'BackgroundColor','white');
+    end
+
+end
+
+function edit_yPos_Callback(hObject, eventdata, handles)
+    % hObject    handle to edit_yPos (see GCBO)
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    structure with handles and user data (see GUIDATA)
+
+    % Hints: get(hObject,'String') returns contents of edit_yPos as text
+    %        str2double(get(hObject,'String')) returns contents of edit_yPos as a double
+
+    handles = setPosition(handles);
+    updatePosition(handles);
+    
+end
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_yPos_CreateFcn(hObject, eventdata, handles)
+    % hObject    handle to edit_yPos (see GCBO)
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    empty - handles not created until after all CreateFcns called
+
+    % Hint: edit controls usually have a white background on Windows.
+    %       See ISPC and COMPUTER.
+    if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+        set(hObject,'BackgroundColor','white');
+    end
+
+end
+
+function edit_zPos_Callback(hObject, eventdata, handles)
+    % hObject    handle to edit_zPos (see GCBO)
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    structure with handles and user data (see GUIDATA)
+
+    % Hints: get(hObject,'String') returns contents of edit_zPos as text
+    %        str2double(get(hObject,'String')) returns contents of edit_zPos as a double
+
+    handles = setPosition(handles);
+    updatePosition(handles);
+    
+end
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function edit_zPos_CreateFcn(hObject, eventdata, handles)
+    % hObject    handle to edit_zPos (see GCBO)
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    empty - handles not created until after all CreateFcns called
+
+    % Hint: edit controls usually have a white background on Windows.
+    %       See ISPC and COMPUTER.
+    if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+        set(hObject,'BackgroundColor','white');
+    end
+
+end
+
+function handles = updatePosition(handles)
+
+    calllib('Tango_DLL','LSX_GetPos',handles.idPtr.Value,handles.xPosPtr,...
+        handles.yPosPtr,handles.zPosPtr,handles.aPosPtr);
+    
+    %handles.xPosPtr.Value
+    
+    % display the relative positions
+    set(handles.edit_xPos,'String',num2str(handles.xPosPtr.Value));
+    set(handles.edit_yPos,'String',num2str(handles.yPosPtr.Value));
+    set(handles.edit_zPos,'String',num2str(handles.zPosPtr.Value));
+    
+end
+
+% set the relative origin equal to the current position
+function handles = setZeroPosition(handles,axisStr)
+
+    % clear the current position
+    calllib('Tango_DLL','LSX_ClearPos',handles.idPtr.Value,7);
+
+end
+
+function handles = setPosition(handles)
+
+    % set the absolute position
+    xPos = str2double(get(handles.edit_xPos,'String'));
+    yPos = str2double(get(handles.edit_yPos,'String'));
+    zPos = str2double(get(handles.edit_zPos,'String'));
+    
+    calllib('Tango_DLL','LSX_MoveAbs',handles.idPtr.Value,xPos,yPos,zPos,0,1);
+
+    pause(0.5);
+    
+end
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in pushbutton_xZero.
+function pushbutton_xZero_Callback(hObject, eventdata, handles)
+    % hObject    handle to pushbutton_xZero (see GCBO)
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    structure with handles and user data (see GUIDATA)
+
+    handles = setZeroPosition(handles,'x');
+    updatePosition(handles);
+    
+    guidata(hObject, handles);
+    
+end
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in checkbox_liveUpdate.
+function checkbox_liveUpdate_Callback(hObject, eventdata, handles)
+% hObject    handle to checkbox_liveUpdate (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of checkbox_liveUpdate
+
+    if get(hObject,'Value') == 1
+        % continuously update the checkbox is deactivated
+        while get(handles.checkbox_liveUpdate,'Value') == 1
+
+            updatePosition(handles);
+            pause(0.5);
+
+        end
+    end
+
+end
+
+##### SOURCE END #####
+--></body></html>

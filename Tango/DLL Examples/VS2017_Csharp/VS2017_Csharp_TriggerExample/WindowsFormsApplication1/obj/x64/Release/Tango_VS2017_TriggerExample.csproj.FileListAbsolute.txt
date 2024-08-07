@@ -1,0 +1,17 @@
+C:\Users\fdettmar\Desktop\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\bin\x64\Release\WindowsFormsApplication1.exe
+C:\Users\fdettmar\Desktop\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\bin\x64\Release\WindowsFormsApplication1.pdb
+C:\Users\fdettmar\Desktop\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\fdettmar\Desktop\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\fdettmar\Desktop\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\Tango_VS2017_TriggerExample.csproj.GenerateResource.cache
+C:\Users\fdettmar\Desktop\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\Tango_VS2017_TriggerExample.csproj.CoreCompileInputs.cache
+C:\Users\fdettmar\Desktop\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\WindowsFormsApplication1.exe
+C:\Users\fdettmar\Desktop\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\WindowsFormsApplication1.pdb
+C:\Users\fdettmar\Desktop\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\Tango_VS2017_TriggerExample.csprojAssemblyReference.cache
+C:\Users\markus.lehr\Desktop\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\bin\x64\Release\WindowsFormsApplication1.exe
+C:\Users\markus.lehr\Desktop\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\bin\x64\Release\WindowsFormsApplication1.pdb
+C:\Users\markus.lehr\Desktop\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\markus.lehr\Desktop\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\markus.lehr\Desktop\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\Tango_VS2017_TriggerExample.csproj.GenerateResource.cache
+C:\Users\markus.lehr\Desktop\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\Tango_VS2017_TriggerExample.csproj.CoreCompileInputs.cache
+C:\Users\markus.lehr\Desktop\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\WindowsFormsApplication1.exe
+C:\Users\markus.lehr\Desktop\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x64\Release\WindowsFormsApplication1.pdb

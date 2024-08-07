@@ -1,0 +1,19 @@
+
+	// MSVC_Tango.idl : IDL-Quellcode für MSVC_Tango.exe
+//
+// Diese Datei wird von dem Programm MIDL verarbeitet, um
+// die Typbibliothek (MSVC_Tango.tlb) und Marshalling-Code zu erstellen.
+import "oaidl.idl";
+import "ocidl.idl";
+[
+	uuid(6059590F-8BB6-4456-A69B-1C2AFF163542),
+	version(1.0),
+	helpstring("MSVC_Tango 1.0 Typbibliothek")
+]
+library MSVC_TangoLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+};
+
+	

@@ -1,0 +1,12 @@
+﻿  stdafx.cpp
+  GenericTests.cpp
+  SelfCheck.cpp
+  TangoUnitTest.cpp
+  Util.cpp
+  Code wird generiert.
+  All 174 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Codegenerierung ist abgeschlossen.
+  TangoUnitTest.vcxproj -> C:\Users\markus.lehr\Desktop\VS2017_Cpp_64bit\x64\Release\TangoDLLtest.exe
+  Copying DLLs
+  Distrib\64\Tango_DLL.dll
+  1 Datei(en) kopiert

@@ -1,0 +1,13 @@
+﻿  stdafx.cpp
+  GenericTests.cpp
+  SelfCheck.cpp
+  TangoUnitTest.cpp
+  Util.cpp
+  Kompilieren...
+  Code wird generiert...
+  TangoUnitTest.vcxproj -> C:\Users\markus.lehr\Desktop\VS2017_Cpp_64bit\x64\Debug\TangoDLLtest.exe
+c:\users\markus.lehr\desktop\vs2017_cpp_64bit\util.cpp(65): warning C6388: "dwHandle" kann nicht "0" sein:  dies entspricht nicht der Spezifikation für Funktion "GetFileVersionInfoW". 
+c:\users\markus.lehr\desktop\vs2017_cpp_64bit\util.cpp(113): warning C6031: Rückgabewert wird ignoriert: "getchar".
+  Copying DLLs
+  Distrib\64\Tango_DLL.dll
+  1 Datei(en) kopiert
